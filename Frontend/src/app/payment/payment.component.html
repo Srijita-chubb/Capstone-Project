@@ -1,0 +1,42 @@
+<body>
+  <div class="bgimg"></div>
+        <div class="card">
+          <div class="leftside">
+            <img
+              src="{{this.movie[0].m_IMAGE}}"
+              class="product"
+              alt="Shoes"
+            />
+          </div>
+          <div class="rightside">
+            <form #myForm="ngForm">
+              
+              <h3>Payment Information</h3>
+              <p>CardHolder Name</p>
+              <input type="text" class="inputbox" [(ngModel)]="name" name="name" required />
+              <p>Card Number</p>
+              <input type="text" class="inputbox" name="card_number" [(ngModel)]="number" id="card_number" required />
+  
+              <p>Card Type</p>
+              <select class="inputbox" type="text" name="card_type" id="card_type" required [(ngModel)]="type">
+                <option value="">--Select a Card Type--</option>
+                <option value="Visa">Visa</option>
+                <option value="RuPay">RuPay</option>
+                <option value="MasterCard">MasterCard</option>
+              </select>
+  <div class="expcvv">
+  
+              <p class="expcvv_text">Expiry</p>
+              <input type="date" class="inputbox" [(ngModel)]="exp_date" name="exp_date" id="exp_date" required />
+  
+              <p class="expcvv_text2">CVV</p>
+              <input type="password" class="inputbox" [(ngModel)]="cvv" name="cvv" id="cvv" required />
+          </div>
+              <p></p>
+              <button type="submit" class="button" [disabled]="myForm.invalid" (click)="onSubmit(name,number,type,exp_date,cvv)">PAY ₹{{this.amount}}</button>
+            </form>
+          </div>
+        </div>
+      
+  </body>  
+  

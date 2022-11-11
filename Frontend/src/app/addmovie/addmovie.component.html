@@ -1,0 +1,47 @@
+<div class="bgimg"></div>
+<div class="row">
+    <div class="col-md-12">
+      
+       <form method="post"  #myForm="ngForm">
+        
+        <fieldset>
+          <h1>Add a movie</h1>
+          <!-- <legend style="color: white;"><span class="number" style="color: white;">1</span> Your Basic Details</legend> -->
+        
+          <label for="name">Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input required [(ngModel)] = "name" type="text" id="name" name="user_name" placeholder="Enter movie name" >
+          
+       
+          <label for="number">Description : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input [(ngModel)] = "desc" type="text" id="number" name="user_number" placeholder="Enter movie description">
+
+          <label for="name">Image URL : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input required [(ngModel)] = "image" type="text" id="name" name="user_name" placeholder="Enter movie image url" >
+          
+       
+          <label for="number">Rating : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input [(ngModel)] = "rating" type="text" id="number" name="user_number" placeholder="Enter movie rating">
+
+          <label for="name">Morning Seats : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input required [(ngModel)] = "m_seats" type="text" id="name" name="user_name" placeholder="Enter movie name" >
+          
+       
+          <label for="number">Noon Seats : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input [(ngModel)] = "n_seats" type="text" id="number" name="user_number" placeholder="Enter movie description">
+
+          <label for="name">Night Seats : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input required [(ngModel)] = "e_seats" type="text" id="name" name="user_name" placeholder="Enter movie image url" >
+          
+       
+          <label for="number">Price : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <input [(ngModel)] = "price" type="text" id="number" name="user_number" placeholder="Enter movie rating">
+
+          
+        </fieldset>
+
+       
+        <button class="btn-3" [disabled]="myForm.invalid" (click)="onSubmit(name,desc,image,rating,m_seats,n_seats,e_seats,price)" type="submit">Submit Details</button>
+        
+        </form>
+        </div>
+      </div>

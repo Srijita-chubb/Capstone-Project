@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+  /*   border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+  }
+  .textt{
+    color: white;
+    padding-right: 450px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 35px;
+}
+nav {
+    width: 100%;
+    height: 50px;
+    background: rgba(248, 54, 54, 0.9);
+    border-top: 1px solid rgba(255,255,255, .2);
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    position: sticky;
+    top: 0;
+    z-index: 8;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0 100px;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px; /**  Rarely used! **/
+  }
+  
+  nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    
+  } 
+
+  /* body {
+    margin: 0;
+    padding: 10% 0;
+    position: relative;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+      animation: fadein 5s;
+    animation-fill-mode: forwards;
+  } */
+  
+  
+  
+ 
+  
+  
+  input[type=text]{
+      width: 100%;
+      padding: 8px 10px 10px;
+      margin: 15px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+  input[type=number]{
+    width: 100%;
+    padding: 8px 10px 10px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+  .btn {
+    padding: 15px 25px;
+    border: none;
+    color: white;
+    width: 100%;
+    display: block;
+    background: #9b59b6;
+    text-transform: uppercase;
+  }
+  
+ 
+
+  *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #dcdcdc;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: rgba(255,255,255,255);
+  border-radius: 8px;
+  border: 5px solid red;
+}
+
+h1,h3 {
+  /* margin: 0 0 30px 0; */
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif
+}
+h1{
+  font-size: 40px;
+  color: rgb(217, 16, 16);
+}
+h3{
+  font-size: 25px;
+  color: rgb(255, 7, 7);
+}
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: 40px;
+  border-radius: 2px;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #ed2a2a;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 5px solid #ed2a2a;
+  border-width: 1px 1px 3px;
+  /* box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset; */
+  margin-bottom: 10px;
+  /* background: none; */
+  display: block;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+}
+.btn-3:disabled:hover {background-color: #4f4f4f}
+.btn-3:enabled:hover {background-color: #a30404}
+
+.btn-3:enabled:active {
+  background-color: #bb7070;
+  box-shadow: 0 5px rgb(0, 0, 0);
+  transform: translateY(4px);
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgb(0, 0, 0);
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #ed2a2a;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
+
+.bgimg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("https://empireweekly.com/wp-content/uploads/2022/02/fall-movies-index-1628968089.jpeg");
+  background-repeat: repeat;
+  background-size: 800px;
+  z-index: -2;
+}
+
+.Swal{
+  background: red;
+}

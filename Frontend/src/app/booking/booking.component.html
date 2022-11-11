@@ -1,0 +1,72 @@
+<nav>
+  <ul>
+    <li class="textt">MovieBuzz</li>
+    <li>
+      <a
+        href="/homepage-component"
+        class="active"
+        style="font-family: 'Josefin Sans', sans-serif; font-size: 20px"
+        ><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Home</a
+      >
+    </li>
+    <!-- <li>
+      <a
+        routerLink = "/gridcomponent-component"
+        class="active"
+        style="font-family: 'Josefin Sans', sans-serif; font-size: 20px"
+        ><i class="fa fa-table" aria-hidden="true"></i>&nbsp;&nbsp;Edit</a
+      >
+    </li> -->
+    <li>
+      <a
+        routerLink = ""
+        class="active1"
+        style="font-family: 'Josefin Sans', sans-serif; font-size: 20px"
+        ><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;LogOut</a
+      >
+    </li>
+  </ul>
+</nav>
+<div class="bgimg"></div>
+    <div class="col-md-12">
+      <!-- (ngSubmit)="onSubmit(myForm.value)" -->
+       <form method="post"  #myForm="ngForm">
+        <!-- {{myForm.value | json}} -->
+
+        <h1> {{this.movie[0].m_NAME}} </h1>
+        <h3> {{this.movie[0].m_RATING}}<img src="https://static.vecteezy.com/system/resources/previews/008/134/821/non_2x/stars-rating-icon-set-set-of-gold-star-icons-isolated-on-a-blank-background-vector.jpg" height="45px" width="120px"> </h3> 
+        <h3> {{this.movie[0].m_DESC}} </h3> 
+        <h3> Price - ₹{{this.movie[0].m_PRICE}} </h3>         
+        <fieldset>
+          
+          <!-- <legend style="color: white;"><span class="number" style="color: white;">1</span> Your Basic Details</legend> -->
+        
+          <label for="name">Name:</label>
+          <input required [(ngModel)] = "var1" type="text" id="name" name="user_name" placeholder="Enter your name" >
+          
+       
+          <label for="number">Phone number:</label>
+          <input [(ngModel)] = "phone" type="text" id="number" name="user_number" placeholder="Enter your number">
+
+          <label for="date">Date of booking:</label>
+          <input [(ngModel)] = "bookdate" type="date" id="bookdate" name="user_bookdate" ngModel="dob" required>
+        
+          <label>Timing:</label>
+          <input required [(ngModel)]="var3" (change) = "onChange($event)" (click)="toggle()" type="radio" id="under_13" value="0" name="user_time"><label for="under_13" class="light">Morning</label><br>
+          <input required [(ngModel)]="var3" (change) = "onChange($event)" (click)="toggle()" type="radio" id="over_13" value="1" name="user_time"><label for="over_13" class="light">Noon</label><br>
+          <input required [(ngModel)]="var3" (change) = "onChange($event)" (click)="toggle()" type="radio" id="over_13" value="2" name="user_time"><label for="over_13" class="light">Night</label><br>
+
+          <label for="seats">No.of seats :</label>
+          <input [(ngModel)]="seatReq" type="number" id="seat" name="user_seat" [disabled]="disabledValue" min="1" required>
+
+          <label for="seats">Seat Availability:</label>
+          <input type="text" id="availability" name="seat_availability" value="{{availableSeats}}" disabled>
+
+          
+        </fieldset>
+
+       
+        <button class="btn-3" [disabled]="myForm.invalid" (click)="onSubmit(var1,this.movie[0].m_NAME,phone,bookdate,var3,seatReq)"  (click)="submit(seatReq,var3)" (click)="goTo(this.movie[0].m_ID,this.movie[0])" type="submit">Submit Details</button>
+        
+        </form>
+        </div>

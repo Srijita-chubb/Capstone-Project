@@ -1,0 +1,247 @@
+.parent-div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-left: 100px;
+    padding-top: 50px;
+    grid-row-gap: 60px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.bgimg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("https://empireweekly.com/wp-content/uploads/2022/02/fall-movies-index-1628968089.jpeg"); 
+    /* background-image: url(https://media.istockphoto.com/id/1314054062/vector/abstract-simply-background-with-natural-line-arts.jpg?s=612x612&w=0&k=20&c=QtBb0IP9iQISX0jsNVdOgbX7VCrCfXWpA9uUMd9c4q4=); */
+    background-repeat: repeat;
+    background-size: 800px;
+}
+.main{
+    position: relative;
+    width: 1000px;
+    margin: 100px auto;
+    z-index: 1;
+}
+.name{
+    position:relative;
+    z-index: 2;
+}
+.icon{
+    position:relative;
+    z-index: 2;
+}
+
+.textt{
+    color: white;
+    padding-right: 450px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 35px;
+}
+.active{
+  color: black !important;
+}
+nav {
+    width: 100%;
+    height: 50px;
+    background: rgba(248, 54, 54, 0.9);
+    border-top: 1px solid rgba(255,255,255, .2);
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    position: sticky;
+    top: 0;
+    z-index: 8;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0 100px;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px; /**  Rarely used! **/
+  }
+  
+  nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    
+  } 
+  
+  .fa-search:before{
+    color: white;
+    font-size: 30px;
+    padding-left: 15px;
+    margin-top: 100px;
+  } 
+.intext{
+    padding-left: 40px;
+    margin-top: 3px;
+    margin-left: 60px;
+    height: 40px;
+}
+.card-img-top{
+  height: 26rem;
+  width: 17.9rem;
+
+}
+.card{
+  background-color: black;
+  height: 30rem;
+  margin: 10px;
+  width: 18rem;
+}
+.card:hover{
+  background: #fa3636;
+  color: black;
+  box-shadow: 0 0 3px #ee3a3a,
+  0 0 3px #ee3a3a,
+  0 0 3px #ee3a3a,
+  0 0 1px #ee3a3a;
+  -webkit-box-reflect:below 0.5px linear-gradient(transparent,rgb(255, 70, 70,0.33));
+  
+}
+
+
+/* .btn{
+  height: 62px;
+  border-radius: 5px;
+  width: 17.9rem;
+  color: white;
+  background-color: #ee3a3a;
+}
+.btn:hover{
+  color: black;
+  background-color: antiquewhite;
+} */
+.book{
+  padding-left: 90px;
+  color: rgb(198, 51, 51);
+}
+
+
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+button {
+  height: 62px;
+  border-radius: 5px;
+  width: 17.9rem;
+  color: white;
+  background-color: #ee3a3a;
+  background: none;
+  display: block;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+}
+
+button::before,
+button::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+button:hover {
+  color: #e41919;
+}
+
+.btn-3::after {
+  height: 0;
+  left: 50%;
+  top: 50%;
+  width: 0;
+}
+
+.btn-3:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* .blur{
+
+  -webkit-webkit-transition: all 1s ease;
+  -moz-webkit-transition: all 1s ease;
+  -ms-webkit-transition: all 1s ease;
+  -o-webkit-transition: all 1s ease;
+}
+.blur img:hover{
+  -webkit-filter: blur(2px);
+  
+} */
+/* .blur div{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.5s linear;
+ }
+*/
+.round-button{
+  padding-left: 250px;
+  padding-top: 90px;
+}
+/* .round-button {
+  align-content: center;
+	box-sizing: border-box;
+	display:block;
+	width:80px;
+	height:80px;
+	padding-top: 14px;
+	padding-left: 8px;
+	line-height: 20px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:20px;
+	font-weight:bold;
+	transition: all 0.3s ease;
+}
+.round-button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+}  */
+
+.parent-div:hover .card {
+  filter: blur(3px);
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.parent-div .card:hover {
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+}

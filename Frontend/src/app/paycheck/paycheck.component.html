@@ -1,0 +1,69 @@
+
+
+<nav>
+  <ul>
+    <li class="textt">MovieBuzz</li>
+    <li>
+      <a
+        routerLink = "/adminhome"
+        class="active"
+        style="font-family: 'Josefin Sans', sans-serif; font-size: 20px"
+        ><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Home</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink = ""
+        class="active"
+        style="font-family: 'Josefin Sans', sans-serif; font-size: 20px"
+        ><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;LogOut</a
+      >
+    </li>
+  </ul>
+</nav>
+<div class="bgimg"></div>
+<h2>PAYMENT DETAILS</h2>
+
+<table mat-table [dataSource]="dataSource" matSort  class="data-table">
+  <ng-container [matColumnDef]="col.key" *ngFor="let col of columnsSchema">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+      <br>
+      {{ col.label }}
+      <br>
+      
+
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <div [ngSwitch]="col.type" *ngIf="!element.isEdit">
+        <div class="btn-edit" *ngSwitchCase="'isEdit'">
+        </div>
+        <span *ngSwitchDefault>
+          {{ element[col.key] }}
+        </span>
+      </div>
+
+      <div [ngSwitch]="col.key" *ngIf="element.isEdit">
+        <div class="btn-edit" *ngSwitchCase="'isEdit'">
+        </div>
+        <mat-form-field class="form-input" *ngSwitchCase="'user_seat'">
+          <input
+            required
+            type="number"
+            matInput
+            (ngModelChange)="element[col.key] = $event"
+            [ngModel]="element[col.key]"
+          />
+        </mat-form-field>
+        <div *ngSwitchDefault>
+          {{ element[col.key] }}
+        </div>
+      </div>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<mat-paginator #paginator
+              [pageSizeOptions]="[5,10, 25, 100]"
+              aria-label="Select page"  class="data-table" style="width: 1042px;"> 
+</mat-paginator>
